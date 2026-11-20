@@ -1,0 +1,40 @@
+========================================================================
+  APP ANDROID: TEST OPOSICIÓN TÉCNICO INFORMÁTICO SMS (800 PREGUNTAS)
+  Diseño móvil compacto SIN SCROLL · 100 % Offline · Formato APK
+========================================================================
+
+Este ZIP contiene el proyecto Android completo (Kotlin + WebView) con las
+800 preguntas ya integradas en app/src/main/assets/questions.js.
+
+------------------------------------------------------------------------
+OPCIÓN A (LA MÁS FÁCIL): GENERAR EL .APK SIN INSTALAR NADA (CON GITHUB)
+------------------------------------------------------------------------
+1. Descomprime este archivo ZIP en una carpeta de tu ordenador.
+2. Crea una cuenta gratuita en https://github.com (si no tienes) y pulsa
+   en "New repository" (puede ser Privado, ponle ej. "test-sms-apk").
+3. Sube todos los archivos y carpetas descomprimidos al repositorio
+   (IMPORTANTE: asegúrate de incluir la carpeta oculta ".github" con el
+   archivo ".github/workflows/build-apk.yml").
+   - Truco: si usas la web de GitHub ("uploading an existing file"),
+     arrastra todos los archivos y carpetas de dentro del ZIP.
+4. En cuanto termines de subirlo, ve a la pestaña "Actions" de tu
+   repositorio en GitHub.
+5. Verás ejecutándose automáticamente el flujo "Compilar APK Android"
+   (tarda unos 2–3 minutos).
+6. Cuando aparezca en verde, entra en esa ejecución, baja hasta la
+   sección "Artifacts" y descarga "OposicionSMS-800-APK".
+7. Dentro de ese ZIP descargado está "app-debug.apk": pásalo a tu móvil
+   Android, tócalo y pulsa Instalar (activa "Instalar apps de origen
+   desconocido" si Android te lo pide).
+
+------------------------------------------------------------------------
+OPCIÓN B: GENERAR EL .APK EN TU PC CON ANDROID STUDIO
+------------------------------------------------------------------------
+1. Descomprime este archivo ZIP.
+2. Abre Android Studio -> "Open" -> selecciona la carpeta descomprimida.
+3. Espera a que termine la sincronización de Gradle (descarga automática
+   de dependencias).
+4. En el menú superior pulsa: Build -> Build Bundle(s) / APK(s) -> Build APK(s).
+5. Al terminar, pulsa "locate" para abrir la carpeta donde se ha generado
+   app-debug.apk (app/build/outputs/apk/debug/app-debug.apk).
+6. Pasa ese archivo al móvil e instálalo.
