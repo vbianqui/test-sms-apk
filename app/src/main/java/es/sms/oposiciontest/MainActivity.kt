@@ -26,7 +26,7 @@ import java.io.File
 class MainActivity : AppCompatActivity() {
 
     private lateinit var webView: WebView
-    private var filePathCallback: ValueCallback<Array<Uri>>? = null
+    private var filePathCallback: ValueCallback<Array<Uri>?>? = null
     private var lastBackPressTime: Long = 0L
 
     private val filePickerLauncher = registerForActivityResult(
@@ -79,7 +79,7 @@ class MainActivity : AppCompatActivity() {
         webView.webChromeClient = object : WebChromeClient() {
             override fun onShowFileChooser(
                 webView: WebView?,
-                filePathCallback: ValueCallback<Array<Uri>>?,
+                filePathCallback: ValueCallback<Array<Uri>?>?,
                 fileChooserParams: FileChooserParams?
             ): Boolean {
                 this@MainActivity.filePathCallback?.onReceiveValue(null)
@@ -152,7 +152,7 @@ class MainActivity : AppCompatActivity() {
                     file.writeText(jsonContent, Charsets.UTF_8)
                     val uri = FileProvider.getUriForFile(
                         this@MainActivity,
-                        "${applicationId}.fileprovider",
+                        "${packageName}.fileprovider",
                         file
                     )
                     val shareIntent = Intent(Intent.ACTION_SEND).apply {
